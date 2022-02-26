@@ -264,7 +264,7 @@ namespace story {
      * @returns True if the menu is open and false otherwise
      */
     //% blockId=arcade_story_is_menu_open
-    //% block="菜单打开"
+    //% block="菜单是打开的"
     //% help=github:arcade-story/is-menu-open.md
     //% weight=50
     //% group="Menu"
