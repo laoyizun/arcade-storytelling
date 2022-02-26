@@ -185,7 +185,7 @@ namespace story {
      * @param enabled Whether or not the sound should play
      */
     //% blockId=story_set_sound_enabled
-    //% block="设置文本声音 $enabled"
+    //% block="启用文本声音 $enabled"
     //% help=github:arcade-story/set-sound-enabled.md
     //% inlineInputMode=inline
     //% blockGap=8

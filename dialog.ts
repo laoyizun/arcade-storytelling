@@ -120,7 +120,7 @@ namespace story {
      * @param callback The code to run inside the cutscene
      */
     //% blockId=arcade_story_start_cutscene
-    //% block="start cutscene"
+    //% block="开始过场动画"
     //% help=github:arcade-story/start-cutscene.md
     //% weight=100
     //% handlerStatement=1
@@ -141,7 +141,7 @@ namespace story {
     }
 
     //% blockId=arcade_story_start_conversation
-    //% block="start conversation"
+    //% block="开始对话"
     //% weight=100
     //% handlerStatement=1
     //% group="Cutscene"
@@ -159,7 +159,7 @@ namespace story {
      * @param label An optional label to display above the text
      */
     //% blockId=arcade_story_print_character_text
-    //% block="print character text $text|| with label $label"
+    //% block="显示角色对话文本 $text|| 图标 $label"
     //% help=github:arcade-story/print-character-text.md
     //% weight=30
     //% group="Text"
@@ -203,7 +203,7 @@ namespace story {
      * @param choice5 A choice to appear in the list of player choices
      */
     //% blockId=arcade_story_show_player_choices
-    //% block="show player choices $choice1 $choice2 ||$choice3 $choice4 $choice5"
+    //% block="显示选项 $choice1 $choice2 ||$choice3 $choice4 $choice5"
     //% help=github:arcade-story/show-player-choices.md
     //% inlineInputMode=inline
     //% weight=80
@@ -225,7 +225,7 @@ namespace story {
      * @returns True if the choice matches the last answer and false otherwise
      */
     //% blockId=arcade_story_last_answer
-    //% block="last answer equals $choice"
+    //% block="最后的选择是 $choice"
     //% help=github:arcade-story/last-answer-equals.md
     //% weight=70
     //% group="Menu"
@@ -234,7 +234,7 @@ namespace story {
     }
 
     //% blockId=arcade_story_cancel_conversation
-    //% block="cancel conversation"
+    //% block="取消对话"
     //% weight=60
     //% deprecated=1
     //% group="Menu"
@@ -249,7 +249,7 @@ namespace story {
      * @returns True if the menu is open and false otherwise
      */
     //% blockId=arcade_story_get_last_answer
-    //% block="get last answer"
+    //% block="获取最后的选择"
     //% help=github:arcade-story/get-last-answer.md
     //% weight=60
     //% blockGap=8
@@ -264,7 +264,7 @@ namespace story {
      * @returns True if the menu is open and false otherwise
      */
     //% blockId=arcade_story_is_menu_open
-    //% block="is menu open"
+    //% block="菜单打开"
     //% help=github:arcade-story/is-menu-open.md
     //% weight=50
     //% group="Menu"
@@ -276,7 +276,7 @@ namespace story {
      * Cancels the currently active cutscene.
      */
     //% blockId=arcade_story_cancel_cutscene
-    //% block="cancel cutscene"
+    //% block="取消当前过场动画"
     //% help=github:arcade-story/cancel-cutscene.md
     //% weight=50
     //% blockGap=8
@@ -290,7 +290,7 @@ namespace story {
      * cutscenes that haven't started yet.
      */
     //% blockId=arcade_story_cancel_all_cutscenes
-    //% block="cancel all cutscenes"
+    //% block="取消全部过场动画"
     //% help=github:arcade-story/cancel-all-cutscenes.md
     //% weight=49
     //% blockGap=8

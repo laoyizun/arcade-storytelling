@@ -31,7 +31,7 @@ namespace story {
      * Cancels all text from the story extension that is currently visible on the screen.
      */
     //% blockId="story_clear_all_text"
-    //% block="cancel current text"
+    //% block="取消当前对话"
     //% help=github:arcade-story/cancel-current-text.md
     //% group="Cutscene"
     //% blockGap=8

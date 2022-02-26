@@ -13,7 +13,7 @@ namespace story {
      * @param speed The speed at which the sprite should move
      */
     //% blockId=story_sprite_move_to_location
-    //% block="$sprite move to x $x y $y with speed $speed"
+    //% block="$sprite 移动 到位置 x $x y $y 速度 $speed "
     //% help=github:arcade-story/sprite-move-to-position.md
     //% inlineInputMode=inline
     //% sprite.shadow=variables_get
@@ -68,7 +68,7 @@ namespace story {
      * @param sprite The sprite to cancel movement on
      */
     //% blockId=story_sprite_cancel_movement
-    //% block="$sprite cancel movement"
+    //% block="$sprite 取消移动"
     //% help=github:arcade-story/sprite-cancel-movement.md
     //% inlineInputMode=inline
     //% sprite.shadow=variables_get
