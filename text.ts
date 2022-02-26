@@ -12,7 +12,7 @@ namespace story {
      * @param speed The speed at which to print the text
      */
     //% blockId=story_show_text
-    //% block="print $text at x $x y $y||with text color $foreground back color $background $speed"
+    //% block="显示对话 $text 在位置 x $x y $y ||文本颜色为 $foreground 背景颜色为 $background $speed"
     //% help=github:arcade-story/print-text.md
     //% text.defl=":)"
     //% foreground.shadow=colorindexpicker
@@ -22,7 +22,7 @@ namespace story {
     //% inlineInputMode=inline
     //% blockGap=8
     //% weight=99
-    //% group="Text"
+    //% group="文本"
     export function printText(text: string, x: number, y: number, foreground = 15, background = 1, speed?: TextSpeed) {
         const script = _formatText(text, speed === undefined ? TextSpeed.Normal : speed);
         script.setColors(foreground, background);
@@ -39,7 +39,7 @@ namespace story {
      * @param speed the speed at which to print the text
      */
     //% blockId=story_sprite_say_text
-    //% block="$sprite say $text ||with text color $foreground back color $background $speed"
+    //% block="$sprite 说 $text ||文本颜色为  $foreground 背景颜色为 $background $speed"
     //% help=github:arcade-story/sprite-say.md
     //% text.defl=":)"
     //% sprite.shadow=variables_get
@@ -51,7 +51,7 @@ namespace story {
     //% inlineInputMode=inline
     //% blockGap=8
     //% weight=98
-    //% group="Text"
+    //% group="文本"
     export function spriteSayText(sprite: Sprite, text: string, foreground = 15, background = 1, speed?: TextSpeed) {
         const script = _formatText(text, speed === undefined ? TextSpeed.Normal : speed);
         script.setColors(foreground, background);
@@ -133,7 +133,7 @@ namespace story {
      * @param speed The speed at which to print the text
      */
     //% blockId=story_print_dialog
-    //% block="print $text at camera x $x y $y in box width $width height $height||with text color $foreground back color $background $speed"
+    //% block="显示对话 $text 在 镜头位置 x $x y $y 对话框大小 宽 $width 高 $height||文本颜色为 $foreground 背景颜色为 $background $speed"
     //% help=github:arcade-story/print-dialog.md
     //% text.defl=":)"
     //% foreground.shadow=colorindexpicker
@@ -147,7 +147,7 @@ namespace story {
     //% inlineInputMode=inline
     //% blockGap=8
     //% weight=60
-    //% group="Text"
+    //% group="文本"
     export function printDialog(text: string, x: number, y: number, height: number, width: number, foreground = 15, background = 1, speed?: TextSpeed) {
         const font = image.getFontForText(text);
         const script = _formatText(text, speed === undefined ? TextSpeed.Normal : speed, Math.idiv(width - 8, font.charWidth), Math.idiv(height - 8, font.charHeight));
@@ -163,7 +163,7 @@ namespace story {
      * @param finalPagePauseMillis The time to pause at the end of the final page in milliseconds
      */
     //% blockId=story_set_page_pause_length
-    //% block="set page pause (ms) $pagePauseMillis and final page pause (ms) $finalPagePauseMillis"
+    //% block="设置每页暂停时间 (ms) $pagePauseMillis and 和最后一页暂停时间 (ms) $finalPagePauseMillis"
     //% help=github:arcade-story/set-page-pause-length.md
     //% pagePauseMillis.shadow=timePicker
     //% pagePauseMillis.defl=1000
@@ -172,7 +172,7 @@ namespace story {
     //% inlineInputMode=inline
     //% blockGap=8
     //% weight=40
-    //% group="Text"
+    //% group="文本"
     export function setPagePauseLength(pagePauseMillis: number, finalPagePauseMillis: number) {
         _defaultPagePauseLength = pagePauseMillis;
         _defaultFinalPagePauseLength = finalPagePauseMillis;
@@ -185,7 +185,7 @@ namespace story {
      * @param enabled Whether or not the sound should play
      */
     //% blockId=story_set_sound_enabled
-    //% block="set text sound enabled $enabled"
+    //% block="设置文本声音 $enabled"
     //% help=github:arcade-story/set-sound-enabled.md
     //% inlineInputMode=inline
     //% blockGap=8

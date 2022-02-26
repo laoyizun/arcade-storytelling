@@ -1,4 +1,4 @@
-//% block="Story" color="#b36634" icon="\uf02d"
+//% block="故事" color="#b36634" icon="\uf02d"
 //% groups='["Text","Movement","Cutscene","Menu"]'
 namespace story {
     export interface Task {
