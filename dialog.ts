@@ -159,7 +159,7 @@ namespace story {
      * @param label An optional label to display above the text
      */
     //% blockId=arcade_story_print_character_text
-    //% block="显示角色对话文本 $text|| 图标 $label"
+    //% block="显示角色对话文本 $text|| 左上角标签为 $label"
     //% help=github:arcade-story/print-character-text.md
     //% weight=30
     //% group="Text"
