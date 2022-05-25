@@ -12,6 +12,18 @@ namespace story {
      * @param y The absolute y position for the sprite to move ot
      * @param speed The speed at which the sprite should move
      */
+    //% blockId=story_sprite_move_to_loc
+    //% block="$sprite 移动 到第 $col 列 第 $row 行 速度 $speed "
+    //% inlineInputMode=inline
+    //% sprite.shadow=variables_get
+    //% sprite.defl=sprite
+    //% speed.defl=100
+    //% blockGap=8
+    //% group="Movement"
+    //% weight=80
+    export function spriteMoveToLoc(sprite: Sprite, col: number, row: number, speed: number){
+        spriteMoveToLocation(sprite,col*16+8,row*16+8,speed)
+    }
     //% blockId=story_sprite_move_to_location
     //% block="$sprite 移动 到位置 x $x y $y 速度 $speed "
     //% help=github:arcade-story/sprite-move-to-position.md
