@@ -61,7 +61,57 @@ namespace story {
             _pauseUntilTaskIsComplete(task);
         }
     }
+    //% blockId=story_sprite_move_to_location_col&row
+    //% block="$sprite move to location col $col row $row with speed $speed"
+    //% help=github:arcade-story/sprite-move-to-position.md
+    //% inlineInputMode=inline
+    //% sprite.shadow=variables_get
+    //% sprite.defl=sprite
+    //% speed.defl=100
+    //% blockGap=8
+    //% group="Movement"
+    //% weight=81
+    export function spriteMoveToLocation1(sprite: Sprite, col: number, row: number, speed: number) {
+        let x = col*16+8
+        let y = row*16+8
+        const distance = calculateDistance(sprite, x, y);
+        const time = (distance / speed) * 1000;
+        const angle = Math.atan2(y - sprite.y, x - sprite.x);
 
+        sprite.ax = 0;
+        sprite.ay = 0;
+        sprite.vx = Math.cos(angle) * speed;
+        sprite.vy = Math.sin(angle) * speed;
+
+        const key = moveTaskKey(sprite);
+        _cancelTask(key);
+
+        let done = false;
+        let ref = setTimeout(function () {
+            sprite.vx = 0;
+            sprite.vy = 0;
+            sprite.x = x;
+            sprite.y = y;
+            done = true;
+        }, time);
+
+        let task: Task = {
+            key: key,
+            isDone: () => done,
+            cancel: () => {
+                done = true;
+                sprite.vx = 0;
+                sprite.vy = 0;
+                clearTimeout(ref);
+            }
+        };
+
+        _trackTask(task);
+        if (!_isInQueueStoryPart()) {
+            _currentCutscene().currentTask = task;
+            _pauseUntilTaskIsComplete(task);
+        }
+    }
     /**
      * Cancels any currently active movement operations on a sprite.
      *
